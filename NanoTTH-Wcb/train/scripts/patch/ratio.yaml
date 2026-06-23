@@ -1,0 +1,7 @@
+#specify the ratio of different processes in training samples
+WW: 0.5
+WZ: 0.5
+ZZ: 0.5
+QCD:  0.5
+Wjet: 0.5
+Zjet: 0.5

@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# ====== 0L training steps ======
+# (1) pre-train WITHOUT event weights (`pretrain_0L.sh`, `ttH_0L_ParT_pretrain.yaml`):
+#     using all events from ttHcc/ttHbb/tt0L+tt1L(7cats)/QCD,MG+Pythia/WJetsToQQ/ZJetsToQQ.
+# (2) fine tune (**lr=1e-4**) the pretrained models (`ttH_0L_ParT.yaml`):
+#     using ttHcc/ttHbb/tt0L+tt1L(7cats)/*QCD MG HT500+*/WJetsToQQ/ZJetsToQQ (i.e., no Pythia and no HT300).
+
+set -x
+
+echo "args: $@"
+
+DATADIR=$1
+
+model=$2
+if [[ "$model" == "ParT" ]]; then
+    modelopts="networks/ParT.py"
+    batchopts="--batch-size 2048 --start-lr 4e-3"
+elif [[ "$model" == "PNXT" ]]; then
+    modelopts="networks/PNXT.py"
+    batchopts="--batch-size 512 --start-lr 1e-2"
+elif [[ "$model" == "PN" ]]; then
+    modelopts="networks/PN.py"
+    batchopts="--batch-size 512 --start-lr 1e-2"
+elif [[ "$model" == "MLP" ]]; then
+    modelopts="networks/MLP.py"
+    batchopts="--batch-size 4096 --start-lr 1e-1"
+else
+    echo "Invalid model $model!"
+    exit 1
+fi
+
+# set a comment via `COMMENT`
+suffix=${COMMENT}
+
+weaver --data-train \
+    "TTHTo2C_TTToHadronic:${DATADIR}/mc/TTHTo2C_TTToHadronic_tree.root" \
+    "TTHTo2C_TTToSemiLep:${DATADIR}/mc/TTHTo2C_TTToSemiLep_tree.root" \
+    "TTHTo2C_TTTo2L2Nu:${DATADIR}/mc/TTHTo2C_TTTo2L2Nu_tree.root" \
+    "TTHTo2B_TTToHadronic:${DATADIR}/mc/TTHTo2B_TTToHadronic_tree.root" \
+    "TTHTo2B_TTToSemiLep:${DATADIR}/mc/TTHTo2B_TTToSemiLep_tree.root" \
+    "TTHTo2B_TTTo2L2Nu:${DATADIR}/mc/TTHTo2B_TTTo2L2Nu_tree.root" \
+    "TTZToQQ:${DATADIR}/mc/TTZToQQ_tree.root" \
+    "TTToHadronic:${DATADIR}/mc/TTToHadronic_tree.root" \
+    "TTToSemiLeptonic:${DATADIR}/mc/TTToSemiLeptonic_tree.root" \
+    "TTTo2L2Nu:${DATADIR}/mc/TTTo2L2Nu_tree.root" \
+    "QCD_HT500to700:${DATADIR}/mc/QCD_HT500to700_tree.root" \
+    "QCD_HT700to1000:${DATADIR}/mc/QCD_HT700to1000_tree.root" \
+    "QCD_HT1000to1500:${DATADIR}/mc/QCD_HT1000to1500_tree.root" \
+    "QCD_HT1500to2000:${DATADIR}/mc/QCD_HT1500to2000_tree.root" \
+    "QCD_HT2000toInf:${DATADIR}/mc/QCD_HT2000toInf_tree.root" \
+    "WJetsToQQ_HT-200to400:${DATADIR}/mc/WJetsToQQ_HT-200to400_tree.root" \
+    "WJetsToQQ_HT-400to600:${DATADIR}/mc/WJetsToQQ_HT-400to600_tree.root" \
+    "WJetsToQQ_HT-600to800:${DATADIR}/mc/WJetsToQQ_HT-600to800_tree.root" \
+    "WJetsToQQ_HT-800toInf:${DATADIR}/mc/WJetsToQQ_HT-800toInf_tree.root" \
+    "ZJetsToQQ_HT-200to400:${DATADIR}/mc/ZJetsToQQ_HT-200to400_tree.root" \
+    "ZJetsToQQ_HT-400to600:${DATADIR}/mc/ZJetsToQQ_HT-400to600_tree.root" \
+    "ZJetsToQQ_HT-600to800:${DATADIR}/mc/ZJetsToQQ_HT-600to800_tree.root" \
+    "ZJetsToQQ_HT-800toInf:${DATADIR}/mc/ZJetsToQQ_HT-800toInf_tree.root" \
+    --samples-per-epoch 2560000 --train-val-split 0.8 \
+    --data-config data/ttH_0L_${model}.yaml --network-config $modelopts \
+    --model-prefix training/ttH_0L/${model}/{auto}${suffix}/net \
+    --num-workers 1 --fetch-step 0.2 $batchopts \
+    --num-epochs 20 --gpus 0 \
+    --optimizer ranger --log logs/ttH_0L_${model}_{auto}${suffix}.log \
+    --cross-validation 'event%5' \
+    "${@:3}"

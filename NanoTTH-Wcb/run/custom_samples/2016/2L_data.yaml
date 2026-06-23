@@ -1,0 +1,14 @@
+doublemu:
+   - DoubleMuon
+
+doubleeg:
+   - DoubleEG
+
+mueg:
+   - MuonEG
+
+singlemu:
+   - SingleMuon
+
+singlee:
+   - SingleElectron

@@ -1,0 +1,3 @@
+cp /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/python/producers/tthTreeProducer.py /afs/cern.ch/user/y/youpeng/NanoTTH/python/producers/tthTreeProducer.py
+cp /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/run/env.sh /afs/cern.ch/user/y/youpeng/NanoTTH/run/env.sh
+cp /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/run/keep_and_drop_output.txt /afs/cern.ch/user/y/youpeng/NanoTTH/run/keep_and_drop_output.txt

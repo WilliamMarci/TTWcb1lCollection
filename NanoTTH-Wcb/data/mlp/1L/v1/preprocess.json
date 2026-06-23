@@ -1,0 +1,278 @@
+{
+  "output_names": [
+    "ttHcc",
+    "ttHbb",
+    "ttLF",
+    "ttcc",
+    "ttbb"
+  ],
+  "input_names": [
+    "jet_features",
+    "lep_features",
+    "event_features"
+  ],
+  "jet_features": {
+    "var_names": [
+      "ak4_pt_log",
+      "ak4_energy_log",
+      "ak4_eta",
+      "ak4_btag_L",
+      "ak4_btag_M",
+      "ak4_btag_T",
+      "ak4_ctag_L",
+      "ak4_ctag_M",
+      "ak4_ctag_T"
+    ],
+    "var_infos": {
+      "ak4_pt_log": {
+        "median": 4,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "ak4_energy_log": {
+        "median": 4,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "ak4_eta": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_btag_L": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_btag_M": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_btag_T": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_ctag_L": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_ctag_M": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_ctag_T": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      }
+    },
+    "var_length": 8
+  },
+  "lep_features": {
+    "var_names": [
+      "lep_pt_log",
+      "lep_energy_log",
+      "lep_eta",
+      "lep_isMu",
+      "lep_isEl"
+    ],
+    "var_infos": {
+      "lep_pt_log": {
+        "median": 4,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "lep_energy_log": {
+        "median": 4,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "lep_eta": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "lep_isMu": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "lep_isEl": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      }
+    },
+    "var_length": 2
+  },
+  "event_features": {
+    "var_names": [
+      "ht_log",
+      "ht_b_log",
+      "ht_c_log",
+      "ht_bc_log",
+      "minDR_b",
+      "minDR_c",
+      "minDR_bc",
+      "mass_minDR_b_log",
+      "mass_minDR_c_log",
+      "mass_minDR_bc_log",
+      "maxMass_b_log",
+      "maxMass_c_log",
+      "maxMass_bc_log"
+    ],
+    "var_infos": {
+      "ht_log": {
+        "median": 6,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "ht_b_log": {
+        "median": 5,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "ht_c_log": {
+        "median": 5,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "ht_bc_log": {
+        "median": 5,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "minDR_b": {
+        "median": 2,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "minDR_c": {
+        "median": 2,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "minDR_bc": {
+        "median": 2,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "mass_minDR_b_log": {
+        "median": 5,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "mass_minDR_c_log": {
+        "median": 5,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "mass_minDR_bc_log": {
+        "median": 5,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "maxMass_b_log": {
+        "median": 5,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "maxMass_c_log": {
+        "median": 5,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "maxMass_bc_log": {
+        "median": 5,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      }
+    },
+    "var_length": 1
+  }
+}

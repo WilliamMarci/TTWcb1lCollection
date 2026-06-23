@@ -1,0 +1,91 @@
+# rename_v1.yaml
+# 1. Define NEW branches to create
+creates:
+  # First: Rename the counter/length variable
+  n_ak8:
+    src: n_genak8
+    type: I
+  
+  # Second: Rename the array variables
+  # Note: lenVar points to the NEW counter name "n_ak8"
+  ak8_n_b_in_jet:
+    src: ak8jet_n_b_in_jet
+    type: I
+    lenVar: n_ak8
+
+  ak8_n_c_in_jet:
+    src: ak8jet_n_c_in_jet
+    type: I
+    lenVar: n_ak8
+    
+  ak8_n_in_jet:
+    src: ak8jet_n_in_jet
+    type: I
+    lenVar: n_ak8
+
+  ak8_type:
+    src: ak8jet_type
+    type: I
+    lenVar: n_ak8
+
+  ak8_is_wbc:
+    src: ak8jet_is_wbc
+    type: I
+    lenVar: n_ak8
+
+  ak8_match_wqq:
+    src: ak8jet_match_wqq
+    type: I
+    lenVar: n_ak8
+
+  ak8_match_wcq:
+    src: ak8jet_match_wcq
+    type: I
+    lenVar: n_ak8
+
+  ak8_match_top_bq:
+    src: ak8jet_match_top_bq
+    type: I
+    lenVar: n_ak8
+
+  ak8_match_top_bc:
+    src: ak8jet_match_top_bc
+    type: I
+    lenVar: n_ak8
+
+  ak8_match_top_bqq:
+    src: ak8jet_match_top_bqq
+    type: I
+    lenVar: n_ak8
+
+  ak8_match_top_bcq:
+    src: ak8jet_match_top_bcq
+    type: I
+    lenVar: n_ak8
+
+  ak8_match_ttWcb:
+    src: ak8jet_match_ttWcb
+    type: I
+    lenVar: n_ak8
+
+  ak8_match_non:
+    src: ak8jet_match_non
+    type: I
+    lenVar: n_ak8
+
+# 2. Define OLD branches to drop
+drops:
+  - n_genak8
+  - ak8jet_n_b_in_jet
+  - ak8jet_n_c_in_jet
+  - ak8jet_n_in_jet
+  - ak8jet_type
+  - ak8jet_is_wbc
+  - ak8jet_match_wqq
+  - ak8jet_match_wcq
+  - ak8jet_match_top_bq
+  - ak8jet_match_top_bc
+  - ak8jet_match_top_bqq
+  - ak8jet_match_top_bcq
+  - ak8jet_match_ttWcb
+  - ak8jet_match_non

@@ -1,0 +1,6 @@
+met:
+   - [
+        /MET/Run2016F-UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD,
+        /MET/Run2016G-UL2016_MiniAODv2_NanoAODv9-v1/NANOAOD,
+        /MET/Run2016H-UL2016_MiniAODv2_NanoAODv9-v1/NANOAOD,
+     ]

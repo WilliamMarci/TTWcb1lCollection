@@ -1,0 +1,38 @@
+# config.yaml
+
+# 1. Define your file groups (Categories)
+# Keys are group names, Values are lists of filename substrings to match.
+file_groups:
+  qcd_background:
+    - QCD
+    - Wjet
+    - Zjet
+
+  no_qcd:
+    - tt-had
+    - tt-semi
+    - tt-lep
+    - ttbb
+    - ttW
+    - ttZ
+    - twZ
+    - WW
+    - WZ
+    - ZZ
+    - ttHNonbb
+    - ttHToTauTau
+    - single-top
+    - ttbar-powheg
+
+
+# 2. Define new branches to create
+branches:
+  is_qcd:
+    type: "I"       # 'I' for Int, 'F' for Float, 'O' for Bool
+    title: "Is this event QCD?"
+    default: 0      # Default value if file doesn't match any group
+    # Map group names to values
+    mappings:
+      qcd_background: 1
+      no_qcd: 0
+

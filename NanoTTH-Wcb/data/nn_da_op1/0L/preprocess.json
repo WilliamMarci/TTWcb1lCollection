@@ -1,0 +1,208 @@
+{
+  "output_names": [
+    "ttHcc",
+    "ttHbb",
+    "ttLF",
+    "ttcj",
+    "ttcc",
+    "ttbj",
+    "ttbb",
+    "ttZcc",
+    "ttZbb",
+    "ttZqq",
+    "zbb",
+    "zcc",
+    "zqq",
+    "wcq",
+    "wqq",
+    "qcd"
+  ],
+  "input_names": [
+    "jet_features",
+    "jet_vectors",
+    "jet_mask"
+  ],
+  "jet_features": {
+    "var_names": [
+      "ak4_pt_log",
+      "ak4_energy_log",
+      "ak4_eta",
+      "ak4_tag_B4",
+      "ak4_tag_B3",
+      "ak4_tag_B2",
+      "ak4_tag_B1",
+      "ak4_tag_B0",
+      "ak4_tag_C4",
+      "ak4_tag_C3",
+      "ak4_tag_C2",
+      "ak4_tag_C1",
+      "ak4_tag_C0"
+    ],
+    "var_infos": {
+      "ak4_pt_log": {
+        "median": 4,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "ak4_energy_log": {
+        "median": 4,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -5,
+        "upper_bound": 5,
+        "pad": 0
+      },
+      "ak4_eta": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_tag_B4": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_tag_B3": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_tag_B2": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_tag_B1": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_tag_B0": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_tag_C4": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_tag_C3": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_tag_C2": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_tag_C1": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_tag_C0": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      }
+    },
+    "var_length": 10
+  },
+  "jet_vectors": {
+    "var_names": [
+      "ak4_px",
+      "ak4_py",
+      "ak4_pz",
+      "ak4_energy"
+    ],
+    "var_infos": {
+      "ak4_px": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_py": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_pz": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      },
+      "ak4_energy": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      }
+    },
+    "var_length": 10
+  },
+  "jet_mask": {
+    "var_names": [
+      "ak4_mask"
+    ],
+    "var_infos": {
+      "ak4_mask": {
+        "median": 0,
+        "norm_factor": 1,
+        "replace_inf_value": 0,
+        "lower_bound": -1e+32,
+        "upper_bound": 1e+32,
+        "pad": 0
+      }
+    },
+    "var_length": 10
+  }
+}

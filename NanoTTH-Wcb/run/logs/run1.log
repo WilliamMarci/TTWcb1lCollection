@@ -1,0 +1,514 @@
+[ CERN 06:14 youpeng@lxplus804 ~/NanoTTH/run/jobs__2017_1L/MC ]  (main)
+ $ ./processor.py 0
+PhysicsTools.NanoTTH.producers.tthTreeProducer tthTreeFromConfig
+['/afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0A9EF3D4-0CFF-6A42-B8AD-2E2BE096488C.root', '/afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0AB0D93A-203F-514F-A766-43EDD6107677.root', '/afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0C5A1C01-7244-564E-89FB-F1E790D08826.root', '/afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/00C27497-3FDD-704C-9C23-36BE3E3C7CE8.root', '/afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0CB51B27-9E89-9C4B-9950-D4170E485383.root', '/afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0DB8287A-CE81-8346-9D67-6030AAC583A5.root', '/afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0F179242-7E1A-C648-8FC0-019EF0D72466.root', '/afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/1C93D977-74DA-1040-8495-A6B6664DCFE5.root', '/afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/1C437F90-5EBA-074E-8BFD-0283F702EABF.root', '/afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/1E38918F-7D67-7D47-81DE-864B806FF46B.root']
+====== Start processing 0/10 files ======
+    nano_postproc.py -c '(Sum$(Electron_pt>15 && abs(Electron_eta)<2.4 && Electron_mvaFall17V2Iso_WP90 && (abs(Electron_eta+Electron_deltaEtaSC)<1.4442 || abs(Electron_eta+Electron_deltaEtaSC)>1.5560) && Electron_pt>25 && Electron_mvaFall17V2Iso_WP80) + Sum$(Muon_pt>10 && abs(Muon_eta)<2.4 && Muon_tightId && Muon_pfRelIso04_all<0.25 && Muon_pt>20 && Muon_pfRelIso04_all<0.15)) >= 1 && Sum$(Jet_pt>15 && abs(Jet_eta)<2.4 && (Jet_jetId & 4))>=4' --bi keep_and_drop_input.txt --bo keep_and_drop_output.txt -z LZ4:4  --first-entry 0  -I PhysicsTools.NanoTTH.producers.tthTreeProducer tthTreeFromConfig    . /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0A9EF3D4-0CFF-6A42-B8AD-2E2BE096488C.root
+Loading tthTreeFromConfig from PhysicsTools.NanoTTH.producers.tthTreeProducer
+[2025-08-05 06:14:32,406] INFO: Running 1L channel for year 2017 with JME systematics {'jec': False, 'jes': None, 'jes_source': '', 'jes_uncertainty_file_prefix': 'RegroupedV2_', 'jer': 'nominal', 'jmr': None, 'met_unclustered': None, 'applyHEMUnc': False, 'smearMET': False}, other options {'min_num_ak4_jets_1L': 3, 'min_num_ak8_jets_1L': 1, 'min_num_b_jets': 1, 'min_num_b_or_c_jets': 1, 'min_ht_0L': 500, 'apply_tight_selection': False, 'apply_score_selection': False, 'apply_qcd_cut': None, 'eval_nn': True, 'eval_nn_da_op1': False, 'eval_nn_da_op2': False, 'eval_mlp': False, 'muon_scale': 'nominal', 'fillJetTaggingScores': True, 'fillEventVars': True, 'fillBDTVars': False, 'runModules': True, 'fillSystWeights': True, 'fillRenormWeights': True, 'fillExtendedPSWeights': True, 'usePuppiJets': True, 'wcb_analysis': True, 'year': '2017'}
+Load Library 'PhysicsToolsNanoTTH'
+Loading muon scale and smearing file from /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/roccor.Run2.v5/RoccoR2017UL.txt
+[2025-08-05 06:14:46,916] INFO: Running 1L channel for year 2017 with jet tagging WPs {54: '(pn_b_plus_c>0.5) & (pn_b_vs_c>0.99)', 53: '(pn_b_plus_c>0.5) & (0.96<pn_b_vs_c<=0.99)', 52: '(pn_b_plus_c>0.5) & (0.88<pn_b_vs_c<=0.96)', 51: '(pn_b_plus_c>0.5) & (0.70<pn_b_vs_c<=0.88)', 50: '(pn_b_plus_c>0.5) & (0.40<pn_b_vs_c<=0.70)', 44: '(pn_b_plus_c>0.5) & (pn_b_vs_c<=0.05)', 43: '(pn_b_plus_c>0.5) & (0.05<pn_b_vs_c<=0.15)', 42: '(pn_b_plus_c>0.5) & (0.15<pn_b_vs_c<=0.40)', 41: '(0.2<pn_b_plus_c<=0.5)', 40: '(0.1<pn_b_plus_c<=0.2)', 0: '(pn_b_plus_c<=0.1)'}, jet PU ID WPs None
+Loaded ONNX models:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.0.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.1.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.2.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.3.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.4.onnx
+preprocess file:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/preprocess.json
+Will write selected trees to .
+[2025-08-05 06:14:49,249] INFO: Load Library 'CondFormatsJetMETObjects'
+[2025-08-05 06:14:49,439] INFO: Load Library 'PhysicsToolsNanoAODTools'
+... copied /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/RegroupedV2_Summer19UL17_V5_MC_UncertaintySources_AK4PFchs.txt to /tmp/youpeng/tmpmj61bm3f
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_MC.tgz to /tmp/youpeng/tmpmj61bm3f
+[2025-08-05 06:14:50,459] INFO: Init JetCorrector: Summer19UL17_V5_MC, AK4PFPuppi, ['L2Relative', 'L3Absolute']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_DATA.tgz to /tmp/youpeng/tmpmj61bm3f
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunB_V5_DATA.tgz to /tmp/youpeng/tmpmj61bm3f
+[2025-08-05 06:14:50,968] INFO: Init JetCorrector: Summer19UL17_RunB_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunC_V5_DATA.tgz to /tmp/youpeng/tmpmj61bm3f
+[2025-08-05 06:14:51,069] INFO: Init JetCorrector: Summer19UL17_RunC_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunD_V5_DATA.tgz to /tmp/youpeng/tmpmj61bm3f
+[2025-08-05 06:14:51,336] INFO: Init JetCorrector: Summer19UL17_RunD_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunE_V5_DATA.tgz to /tmp/youpeng/tmpmj61bm3f
+[2025-08-05 06:14:51,439] INFO: Init JetCorrector: Summer19UL17_RunE_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunF_V5_DATA.tgz to /tmp/youpeng/tmpmj61bm3f
+[2025-08-05 06:14:51,541] INFO: Init JetCorrector: Summer19UL17_RunF_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/Summer19UL17_JRV2_MC.tar.gz to /tmp/youpeng/tmplt53sf76
+Loading jet energy resolutions (JER) from file '/tmp/youpeng/tmplt53sf76/Summer19UL17_JRV2_MC_PtResolution_AK4PFPuppi.txt'
+Loading JER scale factors and uncertainties from file '/tmp/youpeng/tmplt53sf76/Summer19UL17_JRV2_MC_SF_AK4PFPuppi.txt'
+Pre-select 15644 entries out of 44000 (35.55%)
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_TkMu50
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL_DZ
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_MET200
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_PFMET300
+Processed    10000/   15644 entries, 63.92% (elapsed time   118.1s, curr speed    0.085 kHz, avg speed    0.085 kHz), accepted     1236/   10001 events (12.36%)
+Processed 15644 preselected entries from /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0A9EF3D4-0CFF-6A42-B8AD-2E2BE096488C.root (44000 entries). Finally selected 1923 entries
+TTree::SetBranchStatus:0: RuntimeWarning: unknown branch -> bunchCrossing
+Done ./0A9EF3D4-0CFF-6A42-B8AD-2E2BE096488C_Skim.root
+Total time 187.0 sec. to process 44000 events. Rate = 235.3 Hz.
+====== Start processing 1/10 files ======
+    nano_postproc.py -c '(Sum$(Electron_pt>15 && abs(Electron_eta)<2.4 && Electron_mvaFall17V2Iso_WP90 && (abs(Electron_eta+Electron_deltaEtaSC)<1.4442 || abs(Electron_eta+Electron_deltaEtaSC)>1.5560) && Electron_pt>25 && Electron_mvaFall17V2Iso_WP80) + Sum$(Muon_pt>10 && abs(Muon_eta)<2.4 && Muon_tightId && Muon_pfRelIso04_all<0.25 && Muon_pt>20 && Muon_pfRelIso04_all<0.15)) >= 1 && Sum$(Jet_pt>15 && abs(Jet_eta)<2.4 && (Jet_jetId & 4))>=4' --bi keep_and_drop_input.txt --bo keep_and_drop_output.txt -z LZ4:4  --first-entry 0  -I PhysicsTools.NanoTTH.producers.tthTreeProducer tthTreeFromConfig    . /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0AB0D93A-203F-514F-A766-43EDD6107677.root
+Loading tthTreeFromConfig from PhysicsTools.NanoTTH.producers.tthTreeProducer
+[2025-08-05 06:18:01,232] INFO: Running 1L channel for year 2017 with JME systematics {'jec': False, 'jes': None, 'jes_source': '', 'jes_uncertainty_file_prefix': 'RegroupedV2_', 'jer': 'nominal', 'jmr': None, 'met_unclustered': None, 'applyHEMUnc': False, 'smearMET': False}, other options {'min_num_ak4_jets_1L': 3, 'min_num_ak8_jets_1L': 1, 'min_num_b_jets': 1, 'min_num_b_or_c_jets': 1, 'min_ht_0L': 500, 'apply_tight_selection': False, 'apply_score_selection': False, 'apply_qcd_cut': None, 'eval_nn': True, 'eval_nn_da_op1': False, 'eval_nn_da_op2': False, 'eval_mlp': False, 'muon_scale': 'nominal', 'fillJetTaggingScores': True, 'fillEventVars': True, 'fillBDTVars': False, 'runModules': True, 'fillSystWeights': True, 'fillRenormWeights': True, 'fillExtendedPSWeights': True, 'usePuppiJets': True, 'wcb_analysis': True, 'year': '2017'}
+Load Library 'PhysicsToolsNanoTTH'
+Loading muon scale and smearing file from /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/roccor.Run2.v5/RoccoR2017UL.txt
+[2025-08-05 06:18:05,569] INFO: Running 1L channel for year 2017 with jet tagging WPs {54: '(pn_b_plus_c>0.5) & (pn_b_vs_c>0.99)', 53: '(pn_b_plus_c>0.5) & (0.96<pn_b_vs_c<=0.99)', 52: '(pn_b_plus_c>0.5) & (0.88<pn_b_vs_c<=0.96)', 51: '(pn_b_plus_c>0.5) & (0.70<pn_b_vs_c<=0.88)', 50: '(pn_b_plus_c>0.5) & (0.40<pn_b_vs_c<=0.70)', 44: '(pn_b_plus_c>0.5) & (pn_b_vs_c<=0.05)', 43: '(pn_b_plus_c>0.5) & (0.05<pn_b_vs_c<=0.15)', 42: '(pn_b_plus_c>0.5) & (0.15<pn_b_vs_c<=0.40)', 41: '(0.2<pn_b_plus_c<=0.5)', 40: '(0.1<pn_b_plus_c<=0.2)', 0: '(pn_b_plus_c<=0.1)'}, jet PU ID WPs None
+Loaded ONNX models:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.0.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.1.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.2.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.3.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.4.onnx
+preprocess file:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/preprocess.json
+Will write selected trees to .
+[2025-08-05 06:18:07,361] INFO: Load Library 'CondFormatsJetMETObjects'
+[2025-08-05 06:18:07,418] INFO: Load Library 'PhysicsToolsNanoAODTools'
+... copied /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/RegroupedV2_Summer19UL17_V5_MC_UncertaintySources_AK4PFchs.txt to /tmp/youpeng/tmpyj81tco4
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_MC.tgz to /tmp/youpeng/tmpyj81tco4
+[2025-08-05 06:18:08,016] INFO: Init JetCorrector: Summer19UL17_V5_MC, AK4PFPuppi, ['L2Relative', 'L3Absolute']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_DATA.tgz to /tmp/youpeng/tmpyj81tco4
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunB_V5_DATA.tgz to /tmp/youpeng/tmpyj81tco4
+[2025-08-05 06:18:08,463] INFO: Init JetCorrector: Summer19UL17_RunB_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunC_V5_DATA.tgz to /tmp/youpeng/tmpyj81tco4
+[2025-08-05 06:18:08,540] INFO: Init JetCorrector: Summer19UL17_RunC_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunD_V5_DATA.tgz to /tmp/youpeng/tmpyj81tco4
+[2025-08-05 06:18:08,622] INFO: Init JetCorrector: Summer19UL17_RunD_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunE_V5_DATA.tgz to /tmp/youpeng/tmpyj81tco4
+[2025-08-05 06:18:08,704] INFO: Init JetCorrector: Summer19UL17_RunE_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunF_V5_DATA.tgz to /tmp/youpeng/tmpyj81tco4
+[2025-08-05 06:18:08,785] INFO: Init JetCorrector: Summer19UL17_RunF_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/Summer19UL17_JRV2_MC.tar.gz to /tmp/youpeng/tmp7g8w55ee
+Loading jet energy resolutions (JER) from file '/tmp/youpeng/tmp7g8w55ee/Summer19UL17_JRV2_MC_PtResolution_AK4PFPuppi.txt'
+Loading JER scale factors and uncertainties from file '/tmp/youpeng/tmp7g8w55ee/Summer19UL17_JRV2_MC_SF_AK4PFPuppi.txt'
+Pre-select 11255 entries out of 32000 (35.17%)
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_TkMu50
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL_DZ
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_MET200
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_PFMET300
+Processed    10000/   11255 entries, 88.85% (elapsed time   120.9s, curr speed    0.083 kHz, avg speed    0.083 kHz), accepted     1227/   10001 events (12.27%)
+Processed 11255 preselected entries from /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0AB0D93A-203F-514F-A766-43EDD6107677.root (32000 entries). Finally selected 1371 entries
+TTree::SetBranchStatus:0: RuntimeWarning: unknown branch -> bunchCrossing
+Done ./0AB0D93A-203F-514F-A766-43EDD6107677_Skim.root
+Total time 138.1 sec. to process 32000 events. Rate = 231.7 Hz.
+====== Start processing 2/10 files ======
+    nano_postproc.py -c '(Sum$(Electron_pt>15 && abs(Electron_eta)<2.4 && Electron_mvaFall17V2Iso_WP90 && (abs(Electron_eta+Electron_deltaEtaSC)<1.4442 || abs(Electron_eta+Electron_deltaEtaSC)>1.5560) && Electron_pt>25 && Electron_mvaFall17V2Iso_WP80) + Sum$(Muon_pt>10 && abs(Muon_eta)<2.4 && Muon_tightId && Muon_pfRelIso04_all<0.25 && Muon_pt>20 && Muon_pfRelIso04_all<0.15)) >= 1 && Sum$(Jet_pt>15 && abs(Jet_eta)<2.4 && (Jet_jetId & 4))>=4' --bi keep_and_drop_input.txt --bo keep_and_drop_output.txt -z LZ4:4  --first-entry 0  -I PhysicsTools.NanoTTH.producers.tthTreeProducer tthTreeFromConfig    . /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0C5A1C01-7244-564E-89FB-F1E790D08826.root
+Loading tthTreeFromConfig from PhysicsTools.NanoTTH.producers.tthTreeProducer
+[2025-08-05 06:20:29,736] INFO: Running 1L channel for year 2017 with JME systematics {'jec': False, 'jes': None, 'jes_source': '', 'jes_uncertainty_file_prefix': 'RegroupedV2_', 'jer': 'nominal', 'jmr': None, 'met_unclustered': None, 'applyHEMUnc': False, 'smearMET': False}, other options {'min_num_ak4_jets_1L': 3, 'min_num_ak8_jets_1L': 1, 'min_num_b_jets': 1, 'min_num_b_or_c_jets': 1, 'min_ht_0L': 500, 'apply_tight_selection': False, 'apply_score_selection': False, 'apply_qcd_cut': None, 'eval_nn': True, 'eval_nn_da_op1': False, 'eval_nn_da_op2': False, 'eval_mlp': False, 'muon_scale': 'nominal', 'fillJetTaggingScores': True, 'fillEventVars': True, 'fillBDTVars': False, 'runModules': True, 'fillSystWeights': True, 'fillRenormWeights': True, 'fillExtendedPSWeights': True, 'usePuppiJets': True, 'wcb_analysis': True, 'year': '2017'}
+Load Library 'PhysicsToolsNanoTTH'
+Loading muon scale and smearing file from /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/roccor.Run2.v5/RoccoR2017UL.txt
+[2025-08-05 06:20:34,358] INFO: Running 1L channel for year 2017 with jet tagging WPs {54: '(pn_b_plus_c>0.5) & (pn_b_vs_c>0.99)', 53: '(pn_b_plus_c>0.5) & (0.96<pn_b_vs_c<=0.99)', 52: '(pn_b_plus_c>0.5) & (0.88<pn_b_vs_c<=0.96)', 51: '(pn_b_plus_c>0.5) & (0.70<pn_b_vs_c<=0.88)', 50: '(pn_b_plus_c>0.5) & (0.40<pn_b_vs_c<=0.70)', 44: '(pn_b_plus_c>0.5) & (pn_b_vs_c<=0.05)', 43: '(pn_b_plus_c>0.5) & (0.05<pn_b_vs_c<=0.15)', 42: '(pn_b_plus_c>0.5) & (0.15<pn_b_vs_c<=0.40)', 41: '(0.2<pn_b_plus_c<=0.5)', 40: '(0.1<pn_b_plus_c<=0.2)', 0: '(pn_b_plus_c<=0.1)'}, jet PU ID WPs None
+Loaded ONNX models:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.0.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.1.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.2.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.3.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.4.onnx
+preprocess file:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/preprocess.json
+Will write selected trees to .
+[2025-08-05 06:20:36,143] INFO: Load Library 'CondFormatsJetMETObjects'
+[2025-08-05 06:20:36,218] INFO: Load Library 'PhysicsToolsNanoAODTools'
+... copied /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/RegroupedV2_Summer19UL17_V5_MC_UncertaintySources_AK4PFchs.txt to /tmp/youpeng/tmp2soxmbnb
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_MC.tgz to /tmp/youpeng/tmp2soxmbnb
+[2025-08-05 06:20:36,811] INFO: Init JetCorrector: Summer19UL17_V5_MC, AK4PFPuppi, ['L2Relative', 'L3Absolute']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_DATA.tgz to /tmp/youpeng/tmp2soxmbnb
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunB_V5_DATA.tgz to /tmp/youpeng/tmp2soxmbnb
+[2025-08-05 06:20:37,256] INFO: Init JetCorrector: Summer19UL17_RunB_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunC_V5_DATA.tgz to /tmp/youpeng/tmp2soxmbnb
+[2025-08-05 06:20:37,330] INFO: Init JetCorrector: Summer19UL17_RunC_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunD_V5_DATA.tgz to /tmp/youpeng/tmp2soxmbnb
+[2025-08-05 06:20:37,409] INFO: Init JetCorrector: Summer19UL17_RunD_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunE_V5_DATA.tgz to /tmp/youpeng/tmp2soxmbnb
+[2025-08-05 06:20:37,482] INFO: Init JetCorrector: Summer19UL17_RunE_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunF_V5_DATA.tgz to /tmp/youpeng/tmp2soxmbnb
+[2025-08-05 06:20:37,561] INFO: Init JetCorrector: Summer19UL17_RunF_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/Summer19UL17_JRV2_MC.tar.gz to /tmp/youpeng/tmp5fun_p7m
+Loading jet energy resolutions (JER) from file '/tmp/youpeng/tmp5fun_p7m/Summer19UL17_JRV2_MC_PtResolution_AK4PFPuppi.txt'
+Loading JER scale factors and uncertainties from file '/tmp/youpeng/tmp5fun_p7m/Summer19UL17_JRV2_MC_SF_AK4PFPuppi.txt'
+Pre-select 9538 entries out of 27000 (35.33%)
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_TkMu50
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL_DZ
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_MET200
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_PFMET300
+Processed 9538 preselected entries from /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0C5A1C01-7244-564E-89FB-F1E790D08826.root (27000 entries). Finally selected 1130 entries
+TTree::SetBranchStatus:0: RuntimeWarning: unknown branch -> bunchCrossing
+Done ./0C5A1C01-7244-564E-89FB-F1E790D08826_Skim.root
+Total time 112.5 sec. to process 27000 events. Rate = 240.0 Hz.
+====== Start processing 3/10 files ======
+    nano_postproc.py -c '(Sum$(Electron_pt>15 && abs(Electron_eta)<2.4 && Electron_mvaFall17V2Iso_WP90 && (abs(Electron_eta+Electron_deltaEtaSC)<1.4442 || abs(Electron_eta+Electron_deltaEtaSC)>1.5560) && Electron_pt>25 && Electron_mvaFall17V2Iso_WP80) + Sum$(Muon_pt>10 && abs(Muon_eta)<2.4 && Muon_tightId && Muon_pfRelIso04_all<0.25 && Muon_pt>20 && Muon_pfRelIso04_all<0.15)) >= 1 && Sum$(Jet_pt>15 && abs(Jet_eta)<2.4 && (Jet_jetId & 4))>=4' --bi keep_and_drop_input.txt --bo keep_and_drop_output.txt -z LZ4:4  --first-entry 0  -I PhysicsTools.NanoTTH.producers.tthTreeProducer tthTreeFromConfig    . /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/00C27497-3FDD-704C-9C23-36BE3E3C7CE8.root
+Loading tthTreeFromConfig from PhysicsTools.NanoTTH.producers.tthTreeProducer
+[2025-08-05 06:22:32,762] INFO: Running 1L channel for year 2017 with JME systematics {'jec': False, 'jes': None, 'jes_source': '', 'jes_uncertainty_file_prefix': 'RegroupedV2_', 'jer': 'nominal', 'jmr': None, 'met_unclustered': None, 'applyHEMUnc': False, 'smearMET': False}, other options {'min_num_ak4_jets_1L': 3, 'min_num_ak8_jets_1L': 1, 'min_num_b_jets': 1, 'min_num_b_or_c_jets': 1, 'min_ht_0L': 500, 'apply_tight_selection': False, 'apply_score_selection': False, 'apply_qcd_cut': None, 'eval_nn': True, 'eval_nn_da_op1': False, 'eval_nn_da_op2': False, 'eval_mlp': False, 'muon_scale': 'nominal', 'fillJetTaggingScores': True, 'fillEventVars': True, 'fillBDTVars': False, 'runModules': True, 'fillSystWeights': True, 'fillRenormWeights': True, 'fillExtendedPSWeights': True, 'usePuppiJets': True, 'wcb_analysis': True, 'year': '2017'}
+Load Library 'PhysicsToolsNanoTTH'
+Loading muon scale and smearing file from /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/roccor.Run2.v5/RoccoR2017UL.txt
+[2025-08-05 06:22:37,110] INFO: Running 1L channel for year 2017 with jet tagging WPs {54: '(pn_b_plus_c>0.5) & (pn_b_vs_c>0.99)', 53: '(pn_b_plus_c>0.5) & (0.96<pn_b_vs_c<=0.99)', 52: '(pn_b_plus_c>0.5) & (0.88<pn_b_vs_c<=0.96)', 51: '(pn_b_plus_c>0.5) & (0.70<pn_b_vs_c<=0.88)', 50: '(pn_b_plus_c>0.5) & (0.40<pn_b_vs_c<=0.70)', 44: '(pn_b_plus_c>0.5) & (pn_b_vs_c<=0.05)', 43: '(pn_b_plus_c>0.5) & (0.05<pn_b_vs_c<=0.15)', 42: '(pn_b_plus_c>0.5) & (0.15<pn_b_vs_c<=0.40)', 41: '(0.2<pn_b_plus_c<=0.5)', 40: '(0.1<pn_b_plus_c<=0.2)', 0: '(pn_b_plus_c<=0.1)'}, jet PU ID WPs None
+Loaded ONNX models:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.0.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.1.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.2.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.3.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.4.onnx
+preprocess file:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/preprocess.json
+Will write selected trees to .
+[2025-08-05 06:22:38,749] INFO: Load Library 'CondFormatsJetMETObjects'
+[2025-08-05 06:22:38,803] INFO: Load Library 'PhysicsToolsNanoAODTools'
+... copied /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/RegroupedV2_Summer19UL17_V5_MC_UncertaintySources_AK4PFchs.txt to /tmp/youpeng/tmpmcf3y5_o
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_MC.tgz to /tmp/youpeng/tmpmcf3y5_o
+[2025-08-05 06:22:39,383] INFO: Init JetCorrector: Summer19UL17_V5_MC, AK4PFPuppi, ['L2Relative', 'L3Absolute']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_DATA.tgz to /tmp/youpeng/tmpmcf3y5_o
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunB_V5_DATA.tgz to /tmp/youpeng/tmpmcf3y5_o
+[2025-08-05 06:22:39,802] INFO: Init JetCorrector: Summer19UL17_RunB_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunC_V5_DATA.tgz to /tmp/youpeng/tmpmcf3y5_o
+[2025-08-05 06:22:39,873] INFO: Init JetCorrector: Summer19UL17_RunC_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunD_V5_DATA.tgz to /tmp/youpeng/tmpmcf3y5_o
+[2025-08-05 06:22:39,948] INFO: Init JetCorrector: Summer19UL17_RunD_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunE_V5_DATA.tgz to /tmp/youpeng/tmpmcf3y5_o
+[2025-08-05 06:22:40,030] INFO: Init JetCorrector: Summer19UL17_RunE_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunF_V5_DATA.tgz to /tmp/youpeng/tmpmcf3y5_o
+[2025-08-05 06:22:40,116] INFO: Init JetCorrector: Summer19UL17_RunF_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/Summer19UL17_JRV2_MC.tar.gz to /tmp/youpeng/tmp2dz87ilj
+Loading jet energy resolutions (JER) from file '/tmp/youpeng/tmp2dz87ilj/Summer19UL17_JRV2_MC_PtResolution_AK4PFPuppi.txt'
+Loading JER scale factors and uncertainties from file '/tmp/youpeng/tmp2dz87ilj/Summer19UL17_JRV2_MC_SF_AK4PFPuppi.txt'
+Pre-select 18981 entries out of 53000 (35.81%)
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_TkMu50
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL_DZ
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_MET200
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_PFMET300
+Processed    10000/   18981 entries, 52.68% (elapsed time   122.8s, curr speed    0.081 kHz, avg speed    0.081 kHz), accepted     1262/   10001 events (12.62%)
+Processed 18981 preselected entries from /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/00C27497-3FDD-704C-9C23-36BE3E3C7CE8.root (53000 entries). Finally selected 2400 entries
+TTree::SetBranchStatus:0: RuntimeWarning: unknown branch -> bunchCrossing
+Done ./00C27497-3FDD-704C-9C23-36BE3E3C7CE8_Skim.root
+Total time 243.3 sec. to process 53000 events. Rate = 217.8 Hz.
+====== Start processing 4/10 files ======
+    nano_postproc.py -c '(Sum$(Electron_pt>15 && abs(Electron_eta)<2.4 && Electron_mvaFall17V2Iso_WP90 && (abs(Electron_eta+Electron_deltaEtaSC)<1.4442 || abs(Electron_eta+Electron_deltaEtaSC)>1.5560) && Electron_pt>25 && Electron_mvaFall17V2Iso_WP80) + Sum$(Muon_pt>10 && abs(Muon_eta)<2.4 && Muon_tightId && Muon_pfRelIso04_all<0.25 && Muon_pt>20 && Muon_pfRelIso04_all<0.15)) >= 1 && Sum$(Jet_pt>15 && abs(Jet_eta)<2.4 && (Jet_jetId & 4))>=4' --bi keep_and_drop_input.txt --bo keep_and_drop_output.txt -z LZ4:4  --first-entry 0  -I PhysicsTools.NanoTTH.producers.tthTreeProducer tthTreeFromConfig    . /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0CB51B27-9E89-9C4B-9950-D4170E485383.root
+Loading tthTreeFromConfig from PhysicsTools.NanoTTH.producers.tthTreeProducer
+[2025-08-05 06:26:46,589] INFO: Running 1L channel for year 2017 with JME systematics {'jec': False, 'jes': None, 'jes_source': '', 'jes_uncertainty_file_prefix': 'RegroupedV2_', 'jer': 'nominal', 'jmr': None, 'met_unclustered': None, 'applyHEMUnc': False, 'smearMET': False}, other options {'min_num_ak4_jets_1L': 3, 'min_num_ak8_jets_1L': 1, 'min_num_b_jets': 1, 'min_num_b_or_c_jets': 1, 'min_ht_0L': 500, 'apply_tight_selection': False, 'apply_score_selection': False, 'apply_qcd_cut': None, 'eval_nn': True, 'eval_nn_da_op1': False, 'eval_nn_da_op2': False, 'eval_mlp': False, 'muon_scale': 'nominal', 'fillJetTaggingScores': True, 'fillEventVars': True, 'fillBDTVars': False, 'runModules': True, 'fillSystWeights': True, 'fillRenormWeights': True, 'fillExtendedPSWeights': True, 'usePuppiJets': True, 'wcb_analysis': True, 'year': '2017'}
+Load Library 'PhysicsToolsNanoTTH'
+Loading muon scale and smearing file from /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/roccor.Run2.v5/RoccoR2017UL.txt
+[2025-08-05 06:26:51,242] INFO: Running 1L channel for year 2017 with jet tagging WPs {54: '(pn_b_plus_c>0.5) & (pn_b_vs_c>0.99)', 53: '(pn_b_plus_c>0.5) & (0.96<pn_b_vs_c<=0.99)', 52: '(pn_b_plus_c>0.5) & (0.88<pn_b_vs_c<=0.96)', 51: '(pn_b_plus_c>0.5) & (0.70<pn_b_vs_c<=0.88)', 50: '(pn_b_plus_c>0.5) & (0.40<pn_b_vs_c<=0.70)', 44: '(pn_b_plus_c>0.5) & (pn_b_vs_c<=0.05)', 43: '(pn_b_plus_c>0.5) & (0.05<pn_b_vs_c<=0.15)', 42: '(pn_b_plus_c>0.5) & (0.15<pn_b_vs_c<=0.40)', 41: '(0.2<pn_b_plus_c<=0.5)', 40: '(0.1<pn_b_plus_c<=0.2)', 0: '(pn_b_plus_c<=0.1)'}, jet PU ID WPs None
+Loaded ONNX models:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.0.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.1.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.2.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.3.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.4.onnx
+preprocess file:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/preprocess.json
+Will write selected trees to .
+[2025-08-05 06:26:53,205] INFO: Load Library 'CondFormatsJetMETObjects'
+[2025-08-05 06:26:53,269] INFO: Load Library 'PhysicsToolsNanoAODTools'
+... copied /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/RegroupedV2_Summer19UL17_V5_MC_UncertaintySources_AK4PFchs.txt to /tmp/youpeng/tmpzw6sxfm4
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_MC.tgz to /tmp/youpeng/tmpzw6sxfm4
+[2025-08-05 06:26:53,910] INFO: Init JetCorrector: Summer19UL17_V5_MC, AK4PFPuppi, ['L2Relative', 'L3Absolute']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_DATA.tgz to /tmp/youpeng/tmpzw6sxfm4
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunB_V5_DATA.tgz to /tmp/youpeng/tmpzw6sxfm4
+[2025-08-05 06:26:54,399] INFO: Init JetCorrector: Summer19UL17_RunB_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunC_V5_DATA.tgz to /tmp/youpeng/tmpzw6sxfm4
+[2025-08-05 06:26:54,478] INFO: Init JetCorrector: Summer19UL17_RunC_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunD_V5_DATA.tgz to /tmp/youpeng/tmpzw6sxfm4
+[2025-08-05 06:26:54,557] INFO: Init JetCorrector: Summer19UL17_RunD_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunE_V5_DATA.tgz to /tmp/youpeng/tmpzw6sxfm4
+[2025-08-05 06:26:54,645] INFO: Init JetCorrector: Summer19UL17_RunE_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunF_V5_DATA.tgz to /tmp/youpeng/tmpzw6sxfm4
+[2025-08-05 06:26:54,731] INFO: Init JetCorrector: Summer19UL17_RunF_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/Summer19UL17_JRV2_MC.tar.gz to /tmp/youpeng/tmp69hocpql
+Loading jet energy resolutions (JER) from file '/tmp/youpeng/tmp69hocpql/Summer19UL17_JRV2_MC_PtResolution_AK4PFPuppi.txt'
+Loading JER scale factors and uncertainties from file '/tmp/youpeng/tmp69hocpql/Summer19UL17_JRV2_MC_SF_AK4PFPuppi.txt'
+Pre-select 19812 entries out of 56000 (35.38%)
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_TkMu50
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL_DZ
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_MET200
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_PFMET300
+Processed    10000/   19812 entries, 50.47% (elapsed time   120.6s, curr speed    0.083 kHz, avg speed    0.083 kHz), accepted     1226/   10001 events (12.26%)
+Processed 19812 preselected entries from /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0CB51B27-9E89-9C4B-9950-D4170E485383.root (56000 entries). Finally selected 2448 entries
+TTree::SetBranchStatus:0: RuntimeWarning: unknown branch -> bunchCrossing
+Done ./0CB51B27-9E89-9C4B-9950-D4170E485383_Skim.root
+Total time 242.7 sec. to process 56000 events. Rate = 230.8 Hz.
+====== Start processing 5/10 files ======
+    nano_postproc.py -c '(Sum$(Electron_pt>15 && abs(Electron_eta)<2.4 && Electron_mvaFall17V2Iso_WP90 && (abs(Electron_eta+Electron_deltaEtaSC)<1.4442 || abs(Electron_eta+Electron_deltaEtaSC)>1.5560) && Electron_pt>25 && Electron_mvaFall17V2Iso_WP80) + Sum$(Muon_pt>10 && abs(Muon_eta)<2.4 && Muon_tightId && Muon_pfRelIso04_all<0.25 && Muon_pt>20 && Muon_pfRelIso04_all<0.15)) >= 1 && Sum$(Jet_pt>15 && abs(Jet_eta)<2.4 && (Jet_jetId & 4))>=4' --bi keep_and_drop_input.txt --bo keep_and_drop_output.txt -z LZ4:4  --first-entry 0  -I PhysicsTools.NanoTTH.producers.tthTreeProducer tthTreeFromConfig    . /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0DB8287A-CE81-8346-9D67-6030AAC583A5.root
+Loading tthTreeFromConfig from PhysicsTools.NanoTTH.producers.tthTreeProducer
+[2025-08-05 06:31:00,105] INFO: Running 1L channel for year 2017 with JME systematics {'jec': False, 'jes': None, 'jes_source': '', 'jes_uncertainty_file_prefix': 'RegroupedV2_', 'jer': 'nominal', 'jmr': None, 'met_unclustered': None, 'applyHEMUnc': False, 'smearMET': False}, other options {'min_num_ak4_jets_1L': 3, 'min_num_ak8_jets_1L': 1, 'min_num_b_jets': 1, 'min_num_b_or_c_jets': 1, 'min_ht_0L': 500, 'apply_tight_selection': False, 'apply_score_selection': False, 'apply_qcd_cut': None, 'eval_nn': True, 'eval_nn_da_op1': False, 'eval_nn_da_op2': False, 'eval_mlp': False, 'muon_scale': 'nominal', 'fillJetTaggingScores': True, 'fillEventVars': True, 'fillBDTVars': False, 'runModules': True, 'fillSystWeights': True, 'fillRenormWeights': True, 'fillExtendedPSWeights': True, 'usePuppiJets': True, 'wcb_analysis': True, 'year': '2017'}
+Load Library 'PhysicsToolsNanoTTH'
+Loading muon scale and smearing file from /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/roccor.Run2.v5/RoccoR2017UL.txt
+[2025-08-05 06:31:04,393] INFO: Running 1L channel for year 2017 with jet tagging WPs {54: '(pn_b_plus_c>0.5) & (pn_b_vs_c>0.99)', 53: '(pn_b_plus_c>0.5) & (0.96<pn_b_vs_c<=0.99)', 52: '(pn_b_plus_c>0.5) & (0.88<pn_b_vs_c<=0.96)', 51: '(pn_b_plus_c>0.5) & (0.70<pn_b_vs_c<=0.88)', 50: '(pn_b_plus_c>0.5) & (0.40<pn_b_vs_c<=0.70)', 44: '(pn_b_plus_c>0.5) & (pn_b_vs_c<=0.05)', 43: '(pn_b_plus_c>0.5) & (0.05<pn_b_vs_c<=0.15)', 42: '(pn_b_plus_c>0.5) & (0.15<pn_b_vs_c<=0.40)', 41: '(0.2<pn_b_plus_c<=0.5)', 40: '(0.1<pn_b_plus_c<=0.2)', 0: '(pn_b_plus_c<=0.1)'}, jet PU ID WPs None
+Loaded ONNX models:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.0.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.1.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.2.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.3.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.4.onnx
+preprocess file:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/preprocess.json
+Will write selected trees to .
+[2025-08-05 06:31:06,124] INFO: Load Library 'CondFormatsJetMETObjects'
+[2025-08-05 06:31:06,177] INFO: Load Library 'PhysicsToolsNanoAODTools'
+... copied /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/RegroupedV2_Summer19UL17_V5_MC_UncertaintySources_AK4PFchs.txt to /tmp/youpeng/tmpo8_liern
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_MC.tgz to /tmp/youpeng/tmpo8_liern
+[2025-08-05 06:31:06,773] INFO: Init JetCorrector: Summer19UL17_V5_MC, AK4PFPuppi, ['L2Relative', 'L3Absolute']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_DATA.tgz to /tmp/youpeng/tmpo8_liern
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunB_V5_DATA.tgz to /tmp/youpeng/tmpo8_liern
+[2025-08-05 06:31:07,208] INFO: Init JetCorrector: Summer19UL17_RunB_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunC_V5_DATA.tgz to /tmp/youpeng/tmpo8_liern
+[2025-08-05 06:31:07,281] INFO: Init JetCorrector: Summer19UL17_RunC_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunD_V5_DATA.tgz to /tmp/youpeng/tmpo8_liern
+[2025-08-05 06:31:07,354] INFO: Init JetCorrector: Summer19UL17_RunD_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunE_V5_DATA.tgz to /tmp/youpeng/tmpo8_liern
+[2025-08-05 06:31:07,429] INFO: Init JetCorrector: Summer19UL17_RunE_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunF_V5_DATA.tgz to /tmp/youpeng/tmpo8_liern
+[2025-08-05 06:31:07,503] INFO: Init JetCorrector: Summer19UL17_RunF_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/Summer19UL17_JRV2_MC.tar.gz to /tmp/youpeng/tmpdwpukfd0
+Loading jet energy resolutions (JER) from file '/tmp/youpeng/tmpdwpukfd0/Summer19UL17_JRV2_MC_PtResolution_AK4PFPuppi.txt'
+Loading JER scale factors and uncertainties from file '/tmp/youpeng/tmpdwpukfd0/Summer19UL17_JRV2_MC_SF_AK4PFPuppi.txt'
+Pre-select 10696 entries out of 30000 (35.65%)
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_TkMu50
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL_DZ
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_MET200
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_PFMET300
+Processed    10000/   10696 entries, 93.49% (elapsed time   119.7s, curr speed    0.084 kHz, avg speed    0.084 kHz), accepted     1214/   10001 events (12.14%)
+Processed 10696 preselected entries from /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0DB8287A-CE81-8346-9D67-6030AAC583A5.root (30000 entries). Finally selected 1307 entries
+TTree::SetBranchStatus:0: RuntimeWarning: unknown branch -> bunchCrossing
+Done ./0DB8287A-CE81-8346-9D67-6030AAC583A5_Skim.root
+Total time 131.1 sec. to process 30000 events. Rate = 228.8 Hz.
+====== Start processing 6/10 files ======
+    nano_postproc.py -c '(Sum$(Electron_pt>15 && abs(Electron_eta)<2.4 && Electron_mvaFall17V2Iso_WP90 && (abs(Electron_eta+Electron_deltaEtaSC)<1.4442 || abs(Electron_eta+Electron_deltaEtaSC)>1.5560) && Electron_pt>25 && Electron_mvaFall17V2Iso_WP80) + Sum$(Muon_pt>10 && abs(Muon_eta)<2.4 && Muon_tightId && Muon_pfRelIso04_all<0.25 && Muon_pt>20 && Muon_pfRelIso04_all<0.15)) >= 1 && Sum$(Jet_pt>15 && abs(Jet_eta)<2.4 && (Jet_jetId & 4))>=4' --bi keep_and_drop_input.txt --bo keep_and_drop_output.txt -z LZ4:4  --first-entry 0  -I PhysicsTools.NanoTTH.producers.tthTreeProducer tthTreeFromConfig    . /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0F179242-7E1A-C648-8FC0-019EF0D72466.root
+Loading tthTreeFromConfig from PhysicsTools.NanoTTH.producers.tthTreeProducer
+[2025-08-05 06:33:21,730] INFO: Running 1L channel for year 2017 with JME systematics {'jec': False, 'jes': None, 'jes_source': '', 'jes_uncertainty_file_prefix': 'RegroupedV2_', 'jer': 'nominal', 'jmr': None, 'met_unclustered': None, 'applyHEMUnc': False, 'smearMET': False}, other options {'min_num_ak4_jets_1L': 3, 'min_num_ak8_jets_1L': 1, 'min_num_b_jets': 1, 'min_num_b_or_c_jets': 1, 'min_ht_0L': 500, 'apply_tight_selection': False, 'apply_score_selection': False, 'apply_qcd_cut': None, 'eval_nn': True, 'eval_nn_da_op1': False, 'eval_nn_da_op2': False, 'eval_mlp': False, 'muon_scale': 'nominal', 'fillJetTaggingScores': True, 'fillEventVars': True, 'fillBDTVars': False, 'runModules': True, 'fillSystWeights': True, 'fillRenormWeights': True, 'fillExtendedPSWeights': True, 'usePuppiJets': True, 'wcb_analysis': True, 'year': '2017'}
+Load Library 'PhysicsToolsNanoTTH'
+Loading muon scale and smearing file from /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/roccor.Run2.v5/RoccoR2017UL.txt
+[2025-08-05 06:33:26,390] INFO: Running 1L channel for year 2017 with jet tagging WPs {54: '(pn_b_plus_c>0.5) & (pn_b_vs_c>0.99)', 53: '(pn_b_plus_c>0.5) & (0.96<pn_b_vs_c<=0.99)', 52: '(pn_b_plus_c>0.5) & (0.88<pn_b_vs_c<=0.96)', 51: '(pn_b_plus_c>0.5) & (0.70<pn_b_vs_c<=0.88)', 50: '(pn_b_plus_c>0.5) & (0.40<pn_b_vs_c<=0.70)', 44: '(pn_b_plus_c>0.5) & (pn_b_vs_c<=0.05)', 43: '(pn_b_plus_c>0.5) & (0.05<pn_b_vs_c<=0.15)', 42: '(pn_b_plus_c>0.5) & (0.15<pn_b_vs_c<=0.40)', 41: '(0.2<pn_b_plus_c<=0.5)', 40: '(0.1<pn_b_plus_c<=0.2)', 0: '(pn_b_plus_c<=0.1)'}, jet PU ID WPs None
+Loaded ONNX models:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.0.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.1.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.2.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.3.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.4.onnx
+preprocess file:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/preprocess.json
+Will write selected trees to .
+[2025-08-05 06:33:28,105] INFO: Load Library 'CondFormatsJetMETObjects'
+[2025-08-05 06:33:28,166] INFO: Load Library 'PhysicsToolsNanoAODTools'
+... copied /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/RegroupedV2_Summer19UL17_V5_MC_UncertaintySources_AK4PFchs.txt to /tmp/youpeng/tmpt8r2uhiu
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_MC.tgz to /tmp/youpeng/tmpt8r2uhiu
+[2025-08-05 06:33:28,807] INFO: Init JetCorrector: Summer19UL17_V5_MC, AK4PFPuppi, ['L2Relative', 'L3Absolute']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_DATA.tgz to /tmp/youpeng/tmpt8r2uhiu
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunB_V5_DATA.tgz to /tmp/youpeng/tmpt8r2uhiu
+[2025-08-05 06:33:29,289] INFO: Init JetCorrector: Summer19UL17_RunB_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunC_V5_DATA.tgz to /tmp/youpeng/tmpt8r2uhiu
+[2025-08-05 06:33:29,368] INFO: Init JetCorrector: Summer19UL17_RunC_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunD_V5_DATA.tgz to /tmp/youpeng/tmpt8r2uhiu
+[2025-08-05 06:33:29,447] INFO: Init JetCorrector: Summer19UL17_RunD_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunE_V5_DATA.tgz to /tmp/youpeng/tmpt8r2uhiu
+[2025-08-05 06:33:29,526] INFO: Init JetCorrector: Summer19UL17_RunE_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunF_V5_DATA.tgz to /tmp/youpeng/tmpt8r2uhiu
+[2025-08-05 06:33:29,604] INFO: Init JetCorrector: Summer19UL17_RunF_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/Summer19UL17_JRV2_MC.tar.gz to /tmp/youpeng/tmpukhho8si
+Loading jet energy resolutions (JER) from file '/tmp/youpeng/tmpukhho8si/Summer19UL17_JRV2_MC_PtResolution_AK4PFPuppi.txt'
+Loading JER scale factors and uncertainties from file '/tmp/youpeng/tmpukhho8si/Summer19UL17_JRV2_MC_SF_AK4PFPuppi.txt'
+Pre-select 10705 entries out of 30000 (35.68%)
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_TkMu50
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL_DZ
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_MET200
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_PFMET300
+Processed    10000/   10705 entries, 93.41% (elapsed time   123.1s, curr speed    0.081 kHz, avg speed    0.081 kHz), accepted     1235/   10001 events (12.35%)
+Processed 10705 preselected entries from /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/0F179242-7E1A-C648-8FC0-019EF0D72466.root (30000 entries). Finally selected 1328 entries
+TTree::SetBranchStatus:0: RuntimeWarning: unknown branch -> bunchCrossing
+Done ./0F179242-7E1A-C648-8FC0-019EF0D72466_Skim.root
+Total time 134.5 sec. to process 30000 events. Rate = 223.0 Hz.
+====== Start processing 7/10 files ======
+    nano_postproc.py -c '(Sum$(Electron_pt>15 && abs(Electron_eta)<2.4 && Electron_mvaFall17V2Iso_WP90 && (abs(Electron_eta+Electron_deltaEtaSC)<1.4442 || abs(Electron_eta+Electron_deltaEtaSC)>1.5560) && Electron_pt>25 && Electron_mvaFall17V2Iso_WP80) + Sum$(Muon_pt>10 && abs(Muon_eta)<2.4 && Muon_tightId && Muon_pfRelIso04_all<0.25 && Muon_pt>20 && Muon_pfRelIso04_all<0.15)) >= 1 && Sum$(Jet_pt>15 && abs(Jet_eta)<2.4 && (Jet_jetId & 4))>=4' --bi keep_and_drop_input.txt --bo keep_and_drop_output.txt -z LZ4:4  --first-entry 0  -I PhysicsTools.NanoTTH.producers.tthTreeProducer tthTreeFromConfig    . /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/1C93D977-74DA-1040-8495-A6B6664DCFE5.root
+Loading tthTreeFromConfig from PhysicsTools.NanoTTH.producers.tthTreeProducer
+[2025-08-05 06:35:47,010] INFO: Running 1L channel for year 2017 with JME systematics {'jec': False, 'jes': None, 'jes_source': '', 'jes_uncertainty_file_prefix': 'RegroupedV2_', 'jer': 'nominal', 'jmr': None, 'met_unclustered': None, 'applyHEMUnc': False, 'smearMET': False}, other options {'min_num_ak4_jets_1L': 3, 'min_num_ak8_jets_1L': 1, 'min_num_b_jets': 1, 'min_num_b_or_c_jets': 1, 'min_ht_0L': 500, 'apply_tight_selection': False, 'apply_score_selection': False, 'apply_qcd_cut': None, 'eval_nn': True, 'eval_nn_da_op1': False, 'eval_nn_da_op2': False, 'eval_mlp': False, 'muon_scale': 'nominal', 'fillJetTaggingScores': True, 'fillEventVars': True, 'fillBDTVars': False, 'runModules': True, 'fillSystWeights': True, 'fillRenormWeights': True, 'fillExtendedPSWeights': True, 'usePuppiJets': True, 'wcb_analysis': True, 'year': '2017'}
+Load Library 'PhysicsToolsNanoTTH'
+Loading muon scale and smearing file from /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/roccor.Run2.v5/RoccoR2017UL.txt
+[2025-08-05 06:35:51,404] INFO: Running 1L channel for year 2017 with jet tagging WPs {54: '(pn_b_plus_c>0.5) & (pn_b_vs_c>0.99)', 53: '(pn_b_plus_c>0.5) & (0.96<pn_b_vs_c<=0.99)', 52: '(pn_b_plus_c>0.5) & (0.88<pn_b_vs_c<=0.96)', 51: '(pn_b_plus_c>0.5) & (0.70<pn_b_vs_c<=0.88)', 50: '(pn_b_plus_c>0.5) & (0.40<pn_b_vs_c<=0.70)', 44: '(pn_b_plus_c>0.5) & (pn_b_vs_c<=0.05)', 43: '(pn_b_plus_c>0.5) & (0.05<pn_b_vs_c<=0.15)', 42: '(pn_b_plus_c>0.5) & (0.15<pn_b_vs_c<=0.40)', 41: '(0.2<pn_b_plus_c<=0.5)', 40: '(0.1<pn_b_plus_c<=0.2)', 0: '(pn_b_plus_c<=0.1)'}, jet PU ID WPs None
+Loaded ONNX models:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.0.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.1.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.2.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.3.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.4.onnx
+preprocess file:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/preprocess.json
+Will write selected trees to .
+[2025-08-05 06:35:53,128] INFO: Load Library 'CondFormatsJetMETObjects'
+[2025-08-05 06:35:53,185] INFO: Load Library 'PhysicsToolsNanoAODTools'
+... copied /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/RegroupedV2_Summer19UL17_V5_MC_UncertaintySources_AK4PFchs.txt to /tmp/youpeng/tmpewbseast
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_MC.tgz to /tmp/youpeng/tmpewbseast
+[2025-08-05 06:35:53,779] INFO: Init JetCorrector: Summer19UL17_V5_MC, AK4PFPuppi, ['L2Relative', 'L3Absolute']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_DATA.tgz to /tmp/youpeng/tmpewbseast
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunB_V5_DATA.tgz to /tmp/youpeng/tmpewbseast
+[2025-08-05 06:35:54,219] INFO: Init JetCorrector: Summer19UL17_RunB_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunC_V5_DATA.tgz to /tmp/youpeng/tmpewbseast
+[2025-08-05 06:35:54,313] INFO: Init JetCorrector: Summer19UL17_RunC_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunD_V5_DATA.tgz to /tmp/youpeng/tmpewbseast
+[2025-08-05 06:35:54,394] INFO: Init JetCorrector: Summer19UL17_RunD_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunE_V5_DATA.tgz to /tmp/youpeng/tmpewbseast
+[2025-08-05 06:35:54,475] INFO: Init JetCorrector: Summer19UL17_RunE_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunF_V5_DATA.tgz to /tmp/youpeng/tmpewbseast
+[2025-08-05 06:35:54,560] INFO: Init JetCorrector: Summer19UL17_RunF_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/Summer19UL17_JRV2_MC.tar.gz to /tmp/youpeng/tmp80uubz6z
+Loading jet energy resolutions (JER) from file '/tmp/youpeng/tmp80uubz6z/Summer19UL17_JRV2_MC_PtResolution_AK4PFPuppi.txt'
+Loading JER scale factors and uncertainties from file '/tmp/youpeng/tmp80uubz6z/Summer19UL17_JRV2_MC_SF_AK4PFPuppi.txt'
+Pre-select 6454 entries out of 18000 (35.86%)
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_TkMu50
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL_DZ
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_MET200
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_PFMET300
+Processed 6454 preselected entries from /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/1C93D977-74DA-1040-8495-A6B6664DCFE5.root (18000 entries). Finally selected 794 entries
+TTree::SetBranchStatus:0: RuntimeWarning: unknown branch -> bunchCrossing
+Done ./1C93D977-74DA-1040-8495-A6B6664DCFE5_Skim.root
+Total time 96.9 sec. to process 18000 events. Rate = 185.8 Hz.
+====== Start processing 8/10 files ======
+    nano_postproc.py -c '(Sum$(Electron_pt>15 && abs(Electron_eta)<2.4 && Electron_mvaFall17V2Iso_WP90 && (abs(Electron_eta+Electron_deltaEtaSC)<1.4442 || abs(Electron_eta+Electron_deltaEtaSC)>1.5560) && Electron_pt>25 && Electron_mvaFall17V2Iso_WP80) + Sum$(Muon_pt>10 && abs(Muon_eta)<2.4 && Muon_tightId && Muon_pfRelIso04_all<0.25 && Muon_pt>20 && Muon_pfRelIso04_all<0.15)) >= 1 && Sum$(Jet_pt>15 && abs(Jet_eta)<2.4 && (Jet_jetId & 4))>=4' --bi keep_and_drop_input.txt --bo keep_and_drop_output.txt -z LZ4:4  --first-entry 0  -I PhysicsTools.NanoTTH.producers.tthTreeProducer tthTreeFromConfig    . /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/1C437F90-5EBA-074E-8BFD-0283F702EABF.root
+Loading tthTreeFromConfig from PhysicsTools.NanoTTH.producers.tthTreeProducer
+[2025-08-05 06:37:34,283] INFO: Running 1L channel for year 2017 with JME systematics {'jec': False, 'jes': None, 'jes_source': '', 'jes_uncertainty_file_prefix': 'RegroupedV2_', 'jer': 'nominal', 'jmr': None, 'met_unclustered': None, 'applyHEMUnc': False, 'smearMET': False}, other options {'min_num_ak4_jets_1L': 3, 'min_num_ak8_jets_1L': 1, 'min_num_b_jets': 1, 'min_num_b_or_c_jets': 1, 'min_ht_0L': 500, 'apply_tight_selection': False, 'apply_score_selection': False, 'apply_qcd_cut': None, 'eval_nn': True, 'eval_nn_da_op1': False, 'eval_nn_da_op2': False, 'eval_mlp': False, 'muon_scale': 'nominal', 'fillJetTaggingScores': True, 'fillEventVars': True, 'fillBDTVars': False, 'runModules': True, 'fillSystWeights': True, 'fillRenormWeights': True, 'fillExtendedPSWeights': True, 'usePuppiJets': True, 'wcb_analysis': True, 'year': '2017'}
+Load Library 'PhysicsToolsNanoTTH'
+Loading muon scale and smearing file from /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/roccor.Run2.v5/RoccoR2017UL.txt
+[2025-08-05 06:37:38,199] INFO: Running 1L channel for year 2017 with jet tagging WPs {54: '(pn_b_plus_c>0.5) & (pn_b_vs_c>0.99)', 53: '(pn_b_plus_c>0.5) & (0.96<pn_b_vs_c<=0.99)', 52: '(pn_b_plus_c>0.5) & (0.88<pn_b_vs_c<=0.96)', 51: '(pn_b_plus_c>0.5) & (0.70<pn_b_vs_c<=0.88)', 50: '(pn_b_plus_c>0.5) & (0.40<pn_b_vs_c<=0.70)', 44: '(pn_b_plus_c>0.5) & (pn_b_vs_c<=0.05)', 43: '(pn_b_plus_c>0.5) & (0.05<pn_b_vs_c<=0.15)', 42: '(pn_b_plus_c>0.5) & (0.15<pn_b_vs_c<=0.40)', 41: '(0.2<pn_b_plus_c<=0.5)', 40: '(0.1<pn_b_plus_c<=0.2)', 0: '(pn_b_plus_c<=0.1)'}, jet PU ID WPs None
+Loaded ONNX models:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.0.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.1.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.2.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.3.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.4.onnx
+preprocess file:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/preprocess.json
+Will write selected trees to .
+[2025-08-05 06:37:39,865] INFO: Load Library 'CondFormatsJetMETObjects'
+[2025-08-05 06:37:39,919] INFO: Load Library 'PhysicsToolsNanoAODTools'
+... copied /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/RegroupedV2_Summer19UL17_V5_MC_UncertaintySources_AK4PFchs.txt to /tmp/youpeng/tmpeovxvyp5
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_MC.tgz to /tmp/youpeng/tmpeovxvyp5
+[2025-08-05 06:37:40,522] INFO: Init JetCorrector: Summer19UL17_V5_MC, AK4PFPuppi, ['L2Relative', 'L3Absolute']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_DATA.tgz to /tmp/youpeng/tmpeovxvyp5
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunB_V5_DATA.tgz to /tmp/youpeng/tmpeovxvyp5
+[2025-08-05 06:37:40,990] INFO: Init JetCorrector: Summer19UL17_RunB_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunC_V5_DATA.tgz to /tmp/youpeng/tmpeovxvyp5
+[2025-08-05 06:37:41,081] INFO: Init JetCorrector: Summer19UL17_RunC_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunD_V5_DATA.tgz to /tmp/youpeng/tmpeovxvyp5
+[2025-08-05 06:37:41,171] INFO: Init JetCorrector: Summer19UL17_RunD_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunE_V5_DATA.tgz to /tmp/youpeng/tmpeovxvyp5
+[2025-08-05 06:37:41,256] INFO: Init JetCorrector: Summer19UL17_RunE_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunF_V5_DATA.tgz to /tmp/youpeng/tmpeovxvyp5
+[2025-08-05 06:37:41,338] INFO: Init JetCorrector: Summer19UL17_RunF_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/Summer19UL17_JRV2_MC.tar.gz to /tmp/youpeng/tmpmr_a33kt
+Loading jet energy resolutions (JER) from file '/tmp/youpeng/tmpmr_a33kt/Summer19UL17_JRV2_MC_PtResolution_AK4PFPuppi.txt'
+Loading JER scale factors and uncertainties from file '/tmp/youpeng/tmpmr_a33kt/Summer19UL17_JRV2_MC_SF_AK4PFPuppi.txt'
+Pre-select 14645 entries out of 41000 (35.72%)
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_TkMu50
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL_DZ
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_MET200
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_PFMET300
+Processed    10000/   14645 entries, 68.28% (elapsed time   122.3s, curr speed    0.082 kHz, avg speed    0.082 kHz), accepted     1227/   10001 events (12.27%)
+Processed 14645 preselected entries from /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/1C437F90-5EBA-074E-8BFD-0283F702EABF.root (41000 entries). Finally selected 1783 entries
+TTree::SetBranchStatus:0: RuntimeWarning: unknown branch -> bunchCrossing
+Done ./1C437F90-5EBA-074E-8BFD-0283F702EABF_Skim.root
+Total time 182.0 sec. to process 41000 events. Rate = 225.3 Hz.
+====== Start processing 9/10 files ======
+    nano_postproc.py -c '(Sum$(Electron_pt>15 && abs(Electron_eta)<2.4 && Electron_mvaFall17V2Iso_WP90 && (abs(Electron_eta+Electron_deltaEtaSC)<1.4442 || abs(Electron_eta+Electron_deltaEtaSC)>1.5560) && Electron_pt>25 && Electron_mvaFall17V2Iso_WP80) + Sum$(Muon_pt>10 && abs(Muon_eta)<2.4 && Muon_tightId && Muon_pfRelIso04_all<0.25 && Muon_pt>20 && Muon_pfRelIso04_all<0.15)) >= 1 && Sum$(Jet_pt>15 && abs(Jet_eta)<2.4 && (Jet_jetId & 4))>=4' --bi keep_and_drop_input.txt --bo keep_and_drop_output.txt -z LZ4:4  --first-entry 0  -I PhysicsTools.NanoTTH.producers.tthTreeProducer tthTreeFromConfig    . /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/1E38918F-7D67-7D47-81DE-864B806FF46B.root
+Loading tthTreeFromConfig from PhysicsTools.NanoTTH.producers.tthTreeProducer
+[2025-08-05 06:40:46,454] INFO: Running 1L channel for year 2017 with JME systematics {'jec': False, 'jes': None, 'jes_source': '', 'jes_uncertainty_file_prefix': 'RegroupedV2_', 'jer': 'nominal', 'jmr': None, 'met_unclustered': None, 'applyHEMUnc': False, 'smearMET': False}, other options {'min_num_ak4_jets_1L': 3, 'min_num_ak8_jets_1L': 1, 'min_num_b_jets': 1, 'min_num_b_or_c_jets': 1, 'min_ht_0L': 500, 'apply_tight_selection': False, 'apply_score_selection': False, 'apply_qcd_cut': None, 'eval_nn': True, 'eval_nn_da_op1': False, 'eval_nn_da_op2': False, 'eval_mlp': False, 'muon_scale': 'nominal', 'fillJetTaggingScores': True, 'fillEventVars': True, 'fillBDTVars': False, 'runModules': True, 'fillSystWeights': True, 'fillRenormWeights': True, 'fillExtendedPSWeights': True, 'usePuppiJets': True, 'wcb_analysis': True, 'year': '2017'}
+Load Library 'PhysicsToolsNanoTTH'
+Loading muon scale and smearing file from /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/roccor.Run2.v5/RoccoR2017UL.txt
+[2025-08-05 06:40:50,852] INFO: Running 1L channel for year 2017 with jet tagging WPs {54: '(pn_b_plus_c>0.5) & (pn_b_vs_c>0.99)', 53: '(pn_b_plus_c>0.5) & (0.96<pn_b_vs_c<=0.99)', 52: '(pn_b_plus_c>0.5) & (0.88<pn_b_vs_c<=0.96)', 51: '(pn_b_plus_c>0.5) & (0.70<pn_b_vs_c<=0.88)', 50: '(pn_b_plus_c>0.5) & (0.40<pn_b_vs_c<=0.70)', 44: '(pn_b_plus_c>0.5) & (pn_b_vs_c<=0.05)', 43: '(pn_b_plus_c>0.5) & (0.05<pn_b_vs_c<=0.15)', 42: '(pn_b_plus_c>0.5) & (0.15<pn_b_vs_c<=0.40)', 41: '(0.2<pn_b_plus_c<=0.5)', 40: '(0.1<pn_b_plus_c<=0.2)', 0: '(pn_b_plus_c<=0.1)'}, jet PU ID WPs None
+Loaded ONNX models:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.0.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.1.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.2.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.3.onnx
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/net.4.onnx
+preprocess file:
+  /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/nn/1L/v3/preprocess.json
+Will write selected trees to .
+[2025-08-05 06:40:52,555] INFO: Load Library 'CondFormatsJetMETObjects'
+[2025-08-05 06:40:52,614] INFO: Load Library 'PhysicsToolsNanoAODTools'
+... copied /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/RegroupedV2_Summer19UL17_V5_MC_UncertaintySources_AK4PFchs.txt to /tmp/youpeng/tmpjsu7ue5e
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_MC.tgz to /tmp/youpeng/tmpjsu7ue5e
+[2025-08-05 06:40:53,197] INFO: Init JetCorrector: Summer19UL17_V5_MC, AK4PFPuppi, ['L2Relative', 'L3Absolute']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_V5_DATA.tgz to /tmp/youpeng/tmpjsu7ue5e
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunB_V5_DATA.tgz to /tmp/youpeng/tmpjsu7ue5e
+[2025-08-05 06:40:53,657] INFO: Init JetCorrector: Summer19UL17_RunB_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunC_V5_DATA.tgz to /tmp/youpeng/tmpjsu7ue5e
+[2025-08-05 06:40:53,738] INFO: Init JetCorrector: Summer19UL17_RunC_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunD_V5_DATA.tgz to /tmp/youpeng/tmpjsu7ue5e
+[2025-08-05 06:40:53,824] INFO: Init JetCorrector: Summer19UL17_RunD_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunE_V5_DATA.tgz to /tmp/youpeng/tmpjsu7ue5e
+[2025-08-05 06:40:53,922] INFO: Init JetCorrector: Summer19UL17_RunE_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoAODTools/data/jme/Summer19UL17_RunF_V5_DATA.tgz to /tmp/youpeng/tmpjsu7ue5e
+[2025-08-05 06:40:54,001] INFO: Init JetCorrector: Summer19UL17_RunF_V5_DATA, AK4PFPuppi, ['L2Relative', 'L3Absolute', 'L2L3Residual']
+... extracted /eos/home-y/youpeng/research/wcb/ttbbwcb/CMSSW_12_5_0/src/PhysicsTools/NanoTTH/data/jme/Summer19UL17_JRV2_MC.tar.gz to /tmp/youpeng/tmp3vcfruq7
+Loading jet energy resolutions (JER) from file '/tmp/youpeng/tmp3vcfruq7/Summer19UL17_JRV2_MC_PtResolution_AK4PFPuppi.txt'
+Loading JER scale factors and uncertainties from file '/tmp/youpeng/tmp3vcfruq7/Summer19UL17_JRV2_MC_SF_AK4PFPuppi.txt'
+Pre-select 13874 entries out of 39000 (35.57%)
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_TkMu50
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_Mu17_TrkIsoVVL_TkMu8_TrkIsoVVL_DZ
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_MET200
+Error in <TTree::SetBranchStatus>: unknown branch -> HLT_PFMET300
+Processed    10000/   13874 entries, 72.08% (elapsed time   129.8s, curr speed    0.077 kHz, avg speed    0.077 kHz), accepted     1266/   10001 events (12.66%)
+Processed 13874 preselected entries from /afs/cern.ch/user/y/youpeng/eos/CustomizedNanoAOD/V0/2017/MC/TTToSemiLeptonic_Vcb_TuneCP5_13TeV-powheg-pythia8/TOP-RunIISummer20UL17MiniAODv2-00522/1E38918F-7D67-7D47-81DE-864B806FF46B.root (39000 entries). Finally selected 1766 entries
+TTree::SetBranchStatus:0: RuntimeWarning: unknown branch -> bunchCrossing
+Done ./1E38918F-7D67-7D47-81DE-864B806FF46B_Skim.root
+Total time 182.5 sec. to process 39000 events. Rate = 213.7 Hz.
+Adding file00C27497-3FDD-704C-9C23-36BE3E3C7CE8_Skim.root
+Adding file0A9EF3D4-0CFF-6A42-B8AD-2E2BE096488C_Skim.root
+Adding file0AB0D93A-203F-514F-A766-43EDD6107677_Skim.root
+Adding file0C5A1C01-7244-564E-89FB-F1E790D08826_Skim.root
+Adding file0CB51B27-9E89-9C4B-9950-D4170E485383_Skim.root
+Adding file0DB8287A-CE81-8346-9D67-6030AAC583A5_Skim.root
+Adding file0F179242-7E1A-C648-8FC0-019EF0D72466_Skim.root
+Adding file1C437F90-5EBA-074E-8BFD-0283F702EABF_Skim.root
+Adding file1C93D977-74DA-1040-8495-A6B6664DCFE5_Skim.root
+Adding file1E38918F-7D67-7D47-81DE-864B806FF46B_Skim.root
+Merginggenweight
+MergingTT_toppt_weight
+MergingEvents
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+MergingLuminosityBlocks
+MergingRuns
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+missing: []
+ Additional:[]
+Mergingtag

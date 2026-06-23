@@ -1,0 +1,10 @@
+.autotools
+.cproject
+.project
+.pydevproject
+.settings/
+.vscode/
+.DS_Store
+jobs*
+__pycache__
+*.swp

@@ -1,0 +1,4 @@
+*.py
+*.log
+*.root
+!HIG-RunIISummer20UL18MiniAODv2-02334_15946930_1001_1.root

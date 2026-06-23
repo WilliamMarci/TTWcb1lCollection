@@ -1,0 +1,47 @@
+# ttbar-powheg-TuneCP5up:
+#   - TTToSemiLeptonic_TuneCP5up_13TeV-powheg-pythia8
+#   - TTTo2L2Nu_TuneCP5up_13TeV-powheg-pythia8
+
+# ttbar-powheg-TuneCP5down:
+#   - TTToSemiLeptonic_TuneCP5down_13TeV-powheg-pythia8
+#   - TTTo2L2Nu_TuneCP5down_13TeV-powheg-pythia8
+
+# ttbar-powheg-TuneCP5CR1:
+#   - TTToSemiLeptonic_TuneCP5CR1_13TeV-powheg-pythia8
+#   - TTTo2L2Nu_TuneCP5CR1_13TeV-powheg-pythia8
+
+# ttbar-powheg-TuneCP5CR2:
+#   - TTToSemiLeptonic_TuneCP5CR2_13TeV-powheg-pythia8
+#   - TTTo2L2Nu_TuneCP5CR2_13TeV-powheg-pythia8
+
+# ttbar-powheg-erdON:
+#   - TTToSemiLeptonic_TuneCP5_erdON_13TeV-powheg-pythia8
+#   - TTTo2L2Nu_TuneCP5_erdON_13TeV-powheg-pythia8
+
+ttbar-powheg-hdampUP:
+  - TTToSemiLeptonic_hdampUP_TuneCP5_13TeV-powheg-pythia8
+  - TTTo2L2Nu_hdampUP_TuneCP5_13TeV-powheg-pythia8
+
+ttbar-powheg-hdampDOWN:
+  - TTToSemiLeptonic_hdampDOWN_TuneCP5_13TeV-powheg-pythia8
+  - TTTo2L2Nu_hdampDOWN_TuneCP5_13TeV-powheg-pythia8
+
+ttbb-4f-hdampUP:
+  - TTbb_4f_TTToSemiLeptonic_hdampUP_TuneCP5-Powheg-Openloops-Pythia8
+  - TTbb_4f_TTTo2L2Nu_hdampUP_TuneCP5-Powheg-Openloops-Pythia8
+
+ttbb-4f-hdampDOWN:
+  - TTbb_4f_TTToSemiLeptonic_hdampDOWN_TuneCP5-Powheg-Openloops-Pythia8
+  - TTbb_4f_TTTo2L2Nu_hdampDOWN_TuneCP5-Powheg-Openloops-Pythia8
+
+ttbar-fxfx:
+  - TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8
+
+ttbar-herwig:
+  - TT_TuneCH3_13TeV-powheg-herwig7
+
+ttHbb_fxfx:
+  - ttHJetTobb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8
+
+ttH_Nonbb_fxfx:
+  - ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8

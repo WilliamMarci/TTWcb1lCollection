@@ -1,0 +1,16 @@
+request_cpus          = 8
+request_gpus          = 1
+requirements          = regexp("A100", TARGET.GPUs_DeviceName)
+executable            = run_0L_FineTune.sh
+should_transfer_files = YES
+output                = train_0L_FineTune.$(ClusterId).$(ProcId).out
+error                 = train_0L_FineTune.$(ClusterId).$(ProcId).err
+log                   = train_0L_FineTune.$(ClusterId).log
+use_x509userproxy     = true
+WhenToTransferOutput  = ON_EXIT
+want_graceful_removal = true
+
++JobFlavour = "workday"
++AccountingGroup = "group_u_CMST3.all"
+
+queue

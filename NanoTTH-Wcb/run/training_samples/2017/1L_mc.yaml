@@ -1,0 +1,111 @@
+ttHTocc:
+  - ttHTocc_M125_TuneCP5_13TeV-powheg-pythia8
+
+ttHTobb:
+  - ttHTobb_M125_TuneCP5_13TeV-powheg-pythia8
+
+TTHTo2C_TTToHadronic:
+  - TTHTo2C_TTToHadronic_M-125_TuneCP5_13TeV-powheg-pythia8
+TTHTo2C_TTToSemiLep:
+  - TTHTo2C_TTToSemiLep_M-125_TuneCP5_13TeV-powheg-pythia8
+TTHTo2C_TTTo2L2Nu:
+  - TTHTo2C_TTTo2L2Nu_M-125_TuneCP5_13TeV-powheg-pythia8
+
+TTHTo2B_TTToHadronic:
+  - TTHTo2B_TTToHadronic_M-125_TuneCP5_13TeV-powheg-pythia8
+TTHTo2B_TTToSemiLep:
+  - ttHTobb_ttToSemiLep_M125_TuneCP5_13TeV-powheg-pythia8
+TTHTo2B_TTTo2L2Nu:
+  - ttHTobb_ttTo2L2Nu_M125_TuneCP5_13TeV-powheg-pythia8
+
+TTZToQQ:
+  - TTZToQQ_TuneCP5_13TeV-amcatnlo-pythia8
+
+TTZToQQ-EFT:
+  - TTZToQQ_TuneCP5_13TeV_amcatnlo-pythia8
+TTZToBB:
+  - TTZToBB_TuneCP5_13TeV-amcatnlo-pythia8
+# TTZToQQ-ToDiLeptonic:
+#   - TTZToQQ_Dilept_TuneCP5_13TeV-amcatnlo-pythia8
+
+TTToHadronic:
+  - TTToHadronic_TuneCP5_13TeV-powheg-pythia8
+TTToSemiLeptonic:
+  - TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8
+TTTo2L2Nu:
+  - TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8
+
+TTbb_4f_TTToHadronic:
+  - TTbb_4f_TTToHadronic_TuneCP5-Powheg-Openloops-Pythia8
+TTbb_4f_TTToSemiLeptonic:
+  - TTbb_4f_TTToSemiLeptonic_TuneCP5-Powheg-Openloops-Pythia8
+TTbb_4f_TTTo2L2Nu:
+  - TTbb_4f_TTTo2L2Nu_TuneCP5-Powheg-Openloops-Pythia8
+#
+# ###### additional samples for pre-training ######
+# TTToSemiLeptonic_TuneCP5CR1:
+#   - TTToSemiLeptonic_TuneCP5CR1_13TeV-powheg-pythia8
+
+# TTToSemiLeptonic_TuneCP5CR2:
+#   - TTToSemiLeptonic_TuneCP5CR2_13TeV-powheg-pythia8
+
+# TTToSemiLeptonic_TuneCP5down:
+#   - TTToSemiLeptonic_TuneCP5down_13TeV-powheg-pythia8
+
+# TTToSemiLeptonic_TuneCP5up:
+#   - TTToSemiLeptonic_TuneCP5up_13TeV-powheg-pythia8
+
+# TTToSemiLeptonic_TuneCP5_erdON:
+#   - TTToSemiLeptonic_TuneCP5_erdON_13TeV-powheg-pythia8
+
+# TTToSemiLeptonic_mtop166p5:
+#   - TTToSemiLeptonic_mtop166p5_TuneCP5_13TeV-powheg-pythia8
+
+# TTToSemiLeptonic_mtop169p5:
+#   - TTToSemiLeptonic_mtop169p5_TuneCP5_13TeV-powheg-pythia8
+
+# TTToSemiLeptonic_mtop171p5:
+#   - TTToSemiLeptonic_mtop171p5_TuneCP5_13TeV-powheg-pythia8
+
+# TTToSemiLeptonic_mtop173p5:
+#   - TTToSemiLeptonic_mtop173p5_TuneCP5_13TeV-powheg-pythia8
+
+# TTToSemiLeptonic_mtop175p5:
+#   - TTToSemiLeptonic_mtop175p5_TuneCP5_13TeV-powheg-pythia8
+
+# TTToSemiLeptonic_mtop178p5:
+#   - TTToSemiLeptonic_mtop178p5_TuneCP5_13TeV-powheg-pythia8
+
+# TTTo2L2Nu_TuneCP5CR1:
+#   - TTTo2L2Nu_TuneCP5CR1_13TeV-powheg-pythia8
+
+# TTTo2L2Nu_TuneCP5CR2:
+#   - TTTo2L2Nu_TuneCP5CR2_13TeV-powheg-pythia8
+
+# TTTo2L2Nu_TuneCP5down:
+#   - TTTo2L2Nu_TuneCP5down_13TeV-powheg-pythia8
+
+# TTTo2L2Nu_TuneCP5up:
+#   - TTTo2L2Nu_TuneCP5up_13TeV-powheg-pythia8
+
+# TTTo2L2Nu_TuneCP5_erdON:
+#   - TTTo2L2Nu_TuneCP5_erdON_13TeV-powheg-pythia8
+
+# TTTo2L2Nu_mtop166p5:
+#   - TTTo2L2Nu_mtop166p5_TuneCP5_13TeV-powheg-pythia8
+
+# TTTo2L2Nu_mtop169p5:
+#   - TTTo2L2Nu_mtop169p5_TuneCP5_13TeV-powheg-pythia8
+
+# TTTo2L2Nu_mtop171p5:
+#   - TTTo2L2Nu_mtop171p5_TuneCP5_13TeV-powheg-pythia8
+
+# TTTo2L2Nu_mtop173p5:
+#   - TTTo2L2Nu_mtop173p5_TuneCP5_13TeV-powheg-pythia8
+
+# TTTo2L2Nu_mtop175p5:
+#   - TTTo2L2Nu_mtop175p5_TuneCP5_13TeV-powheg-pythia8
+
+# TTTo2L2Nu_mtop178p5:
+#   - TTTo2L2Nu_mtop178p5_TuneCP5_13TeV-powheg-pythia8
+# ###### additional samples for pre-training ######

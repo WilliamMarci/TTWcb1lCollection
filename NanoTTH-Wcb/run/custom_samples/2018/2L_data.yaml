@@ -1,0 +1,11 @@
+doublemu:
+   - DoubleMuon
+
+egamma:
+   - EGamma
+
+mueg:
+   - MuonEG
+
+singlemu:
+   - SingleMuon
